@@ -1,4 +1,13 @@
-name: Build Custom Marlin 2.1.x E3V3SE Firmware 
+name: Build Custom Marlin 2.1.x E3V3SE Firmware
+
+on:
+  push:
+    branches:
+      - main
+      - bugfix-2.1.x
+      - for_E3V3SE
+  workflow_dispatch:
+
 
 on:
   workflow_dispatch:
