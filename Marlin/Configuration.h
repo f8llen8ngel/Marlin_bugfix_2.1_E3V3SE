@@ -297,8 +297,6 @@ extern uint8_t CZ_AFTER_HOMING;
 // Switch extruders by bumping the toolhead. Requires EVENT_GCODE_TOOLCHANGE_#.
 //#define MECHANICAL_SWITCHING_EXTRUDER
 
-extern uint8_t CZ_AFTER_HOMING;
-
 /**
  * A dual-nozzle that uses a servomotor to raise/lower one (or both) of the nozzles.
  * Can be combined with SWITCHING_EXTRUDER.
@@ -1978,7 +1976,6 @@ extern uint8_t CZ_AFTER_HOMING;
 // #define DWIN_ZHOME_MENU             // Enable LCD Menu to Configure Z Height after Homing 
 #if ENABLED(DWIN_ZHOME_MENU)
   extern uint8_t CZ_AFTER_HOMING; 
-uint8_t CZ_AFTER_HOMING = 0;
 #define xysk 0
 #endif
 
