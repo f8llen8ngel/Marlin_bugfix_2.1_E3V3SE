@@ -297,6 +297,8 @@ extern uint8_t CZ_AFTER_HOMING;
 // Switch extruders by bumping the toolhead. Requires EVENT_GCODE_TOOLCHANGE_#.
 //#define MECHANICAL_SWITCHING_EXTRUDER
 
+extern uint8_t CZ_AFTER_HOMING;
+
 /**
  * A dual-nozzle that uses a servomotor to raise/lower one (or both) of the nozzles.
  * Can be combined with SWITCHING_EXTRUDER.
