@@ -24,7 +24,7 @@ lin 3D Printer Firmware
  */
 *** Begin Patch
 *** Update File: Marlin/src/lcd/dwin/creality/dwin.cpp
-@@
+
 -// Example problematic global (original)
 -const char CZ_AFTER_HOMING[] = "some string or value";
 +// Make this file-local to avoid multiple-definition at link time
