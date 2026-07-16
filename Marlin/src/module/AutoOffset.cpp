@@ -1,5 +1,6 @@
 // Forward-declare de variant met float& zodat de compiler weet dat die bestaat
-extern bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float &outOffset);
+extern bool getZOffset(bool isNozzleClr, bool isRunProbByPress, bool isRunProbByTouch, float *outOffset);
+
 
 #include "AutoOffset.h"
 
@@ -9,7 +10,8 @@ bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, fl
     float tmp = 0.0f;
 
     // Roep jouw bestaande implementatie aan als die float& gebruikt:
-    if (!getZOffset(isNozzleClr, isRunProByPress, isRunProByTouch, tmp))
+   if (!getZOffset(isNozzleClr, isRunProbByPress, isRunProbByTouch, &tmp))
+
         return false;
 
     *outOffset = tmp;
