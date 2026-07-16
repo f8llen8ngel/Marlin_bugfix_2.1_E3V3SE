@@ -22,8 +22,6 @@ lin 3D Printer Firmware
 /**
  *DWIN by Creality3D
  */
-*** Begin Patch
-*** Update File: Marlin/src/lcd/dwin/creality/dwin.cpp
 
 -// Example problematic global (original)
 -const char CZ_AFTER_HOMING[] = "some string or value";
