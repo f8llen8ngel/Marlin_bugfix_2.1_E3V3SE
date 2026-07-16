@@ -1,3 +1,10 @@
+// Marlin/src/module/AutoOffset.cpp
+// Complete corrected AutoOffset.cpp for your repo
+// - fixed identifier typos (isRunProByPress)
+// - forward-declare float& overload that the wrapper intends to call
+// - wrapper provides pointer API by calling the reference overload
+// Paste this file as a replacement for the existing AutoOffset.cpp
+
 // Forward-declare the variant with float& so the compiler knows it exists
 extern bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float &outOffset);
 
@@ -15,7 +22,6 @@ bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, fl
     *outOffset = tmp;
     return true;
 }
-
 
 #if ENABLED(USE_AUTOZ_TOOL_2)
 
