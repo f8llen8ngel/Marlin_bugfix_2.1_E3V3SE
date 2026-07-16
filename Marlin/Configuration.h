@@ -21,6 +21,9 @@
  */
 #pragma once
 
+extern uint8_t CZ_AFTER_HOMING;
+
+
 /**
  * Configuration.h
  *
