@@ -47,6 +47,8 @@
   #include <usbd_cdc_if.h>
 #endif
 
+uint8_t CZ_AFTER_HOMING = 0;
+
 // ------------------------
 // Public Variables
 // ------------------------
