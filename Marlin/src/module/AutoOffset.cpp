@@ -20,6 +20,22 @@ char *getStr(float f)
   return str[index++ % 16];
 }
 
+// Reference overload: compute the Z offset and return it via a float&.
+// This resolves the undefined reference produced by the pointer-wrapper.
+bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float &outOffset) {
+  // Use the existing helper that computes the offset at the reference press point.
+  const xyz_float_t basePos = PRESS_XYZ_POS;
+  float z = Multiple_Hight_At(basePos, isRunProByPress, isRunProByTouch);
+
+  // Validate the result before returning.
+  if (!is_valid_offset(z)) {
+    return false;
+  }
+
+  outOffset = z;
+  return true;
+}
+
 /*
  *Function Name: ckGpioIsInited(int pin)
  *Purpose: Detect whether the given pin has been initialized to avoid repeated initialization of clk, which may cause timing confusion.
