@@ -8,6 +8,7 @@
 *Attention: During the migration process, users must ensure that all macro definitions are correct and running normally (the current macro definitions are based on Marlin 2.0.8.3).
 */
 
+bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float *outOffset);
 
 #ifndef __AUTO_OFFSET_H__
 #define __AUTO_OFFSET_H__
