@@ -178,8 +178,4 @@ void HAL_SYSTICK_Callback() {
   if (systick_user_callback) systick_user_callback();
 }
 
-uint8_t CZ_AFTER_HOMING = 0;
-
-
-
 #endif // HAL_STM32
