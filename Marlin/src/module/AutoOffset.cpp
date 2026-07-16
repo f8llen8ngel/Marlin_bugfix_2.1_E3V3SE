@@ -1,5 +1,21 @@
 #include "AutoOffset.h"
 
+bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float *outOffset) {
+    if (!outOffset) return false;
+
+    float tmp = 0.0f;
+
+    // Roep jouw bestaande implementatie aan als die float& gebruikt:
+    if (!getZOffset(isNozzleClr, isRunProByPress, isRunProByTouch, tmp))
+        return false;
+
+    *outOffset = tmp;
+    return true;
+}
+
+
+
+
 #if ENABLED(USE_AUTOZ_TOOL_2)
 
 /*
