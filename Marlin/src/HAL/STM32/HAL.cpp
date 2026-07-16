@@ -112,6 +112,9 @@ void MarlinHAL::idletask() {
   #endif
 }
 
+uint8_t CZ_AFTER_HOMING = 0;
+
+
 void MarlinHAL::reboot() { NVIC_SystemReset(); }
 
 uint8_t MarlinHAL::get_reset_source() {
