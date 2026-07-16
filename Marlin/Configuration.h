@@ -64,6 +64,9 @@
 #define STRING_CONFIG_H_AUTHOR "Marlin, Creality, Kraplax & Navaismo" // Original author or contributor.
 //#define CUSTOM_VERSION_FILE Version.h // Path from the root directory (no quotes)
 
+extern uint8_t CZ_AFTER_HOMING;
+
+
 // @section machine
 
 // Choose the name from boards.h that matches your setup
