@@ -1973,7 +1973,7 @@
 // #define DWIN_ZHOME_MENU             // Enable LCD Menu to Configure Z Height after Homing 
 #if ENABLED(DWIN_ZHOME_MENU)
   extern uint8_t CZ_AFTER_HOMING; 
-#define CZ_AFTER_HOMING 0
+uint8_t CZ_AFTER_HOMING = 0;
 #define xysk 0
 #endif
 
