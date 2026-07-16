@@ -23,12 +23,6 @@ lin 3D Printer Firmware
  *DWIN by Creality3D
  */
 
--// Example problematic global (original)
--const char CZ_AFTER_HOMING[] = "some string or value";
-+// Make this file-local to avoid multiple-definition at link time
-+static const char CZ_AFTER_HOMING[] = "some string or value";
-*** End Patch
-
 #include "../../../inc/MarlinConfigPre.h"
 #include "../../../inc/MarlinConfig.h"
 #if ENABLED(DWIN_CREALITY_LCD)
