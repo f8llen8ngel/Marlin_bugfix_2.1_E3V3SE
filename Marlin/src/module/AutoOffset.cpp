@@ -4,6 +4,20 @@
 // - forward-declare float& overload that the wrapper intends to call
 // - wrapper provides pointer API by calling the reference overload
 // Paste this file as a replacement for the existing AutoOffset.cpp
+// Forward-declare internal helper
+static float Multiple_Hight_At(xyz_float_t basePos, bool isRunProByPress, bool isRunProByTouch);
+
+// Implementatie van de ontbrekende reference overload
+bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float &outOffset) {
+  const float result = Multiple_Hight_At(PRESS_XYZ_POS, isRunProByPress, isRunProByTouch);
+
+  if (!is_valid_offset(result)) {
+    return false;
+  }
+
+  outOffset = result;
+  return true;
+}
 
 *** Begin Patch
 *** Update File: Marlin/src/lcd/dwin/creality/dwin.cpp
