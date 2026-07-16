@@ -19,15 +19,6 @@ bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, fl
   return true;
 }
 
-
-*** End Patch
-
-
-// Forward-declare the variant with float& so the compiler knows it exists
-extern bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float &outOffset);
-
-#include "AutoOffset.h"
-
 bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float *outOffset) {
     if (!outOffset) return false;
 
