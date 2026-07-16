@@ -265,6 +265,10 @@ uint8_t afterprobe_fan0_speed = 0;
 bool home_flag = false;
 bool G29_flag = false;
 
+#if ENABLED(DWIN_ZHOME_MENU)
+  uint8_t CZ_AFTER_HOMING = Z_AFTER_HOMING;
+#endif
+
 #define DWIN_BOOT_STEP_EEPROM_ADDRESS 0x01 // Set up boot steps
 #define DWIN_LANGUAGE_EEPROM_ADDRESS 0x02  // Between 0x01 and 0x63 (EEPROM_OFFSET-1)
 #define DWIN_AUTO_BED_EEPROM_ADDRESS 0x03  // Hot bed automatic pid target value
