@@ -5,6 +5,16 @@
 // - wrapper provides pointer API by calling the reference overload
 // Paste this file as a replacement for the existing AutoOffset.cpp
 
+*** Begin Patch
+*** Update File: Marlin/src/lcd/dwin/creality/dwin.cpp
+@@
+-// Example problematic global (original)
+-const char CZ_AFTER_HOMING[] = "some string or value";
++// Make this file-local to avoid multiple-definition at link time
++static const char CZ_AFTER_HOMING[] = "some string or value";
+*** End Patch
+
+
 // Forward-declare the variant with float& so the compiler knows it exists
 extern bool getZOffset(bool isNozzleClr, bool isRunProByPress, bool isRunProByTouch, float &outOffset);
 
